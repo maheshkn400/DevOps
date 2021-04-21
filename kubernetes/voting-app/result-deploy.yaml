@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reslut-app-deploy
+  app: demo-voting-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: reslut-app-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: reslut-app-pod
+      labels:
+        name: reslut-app-pod
+        app: demo-voting-app
+    spec:
+      containers:
+        - name: reslut-app
+          image: kodekloud/examplevotingapp_vote:v1
+          ports:
+            containerPort: 80
