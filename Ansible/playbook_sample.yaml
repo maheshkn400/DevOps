@@ -1,0 +1,36 @@
+# Hosts are based on inventory_sample.yaml in same path
+-
+    name: 'Stop the web services on web server nodes'
+    hosts: web_nodes
+    tasks:
+        -
+            name: 'Stop the web services on web server nodes'
+            command: 'service httpd stop'
+-
+    name: 'Shutdown the database services on db server nodes'
+    hosts: db_nodes
+    tasks:
+        -
+            name: 'Shutdown the database services on db server nodes'
+            command: 'service mysql stop'
+-
+    name: 'Restart all servers (web and db) at once'
+    hosts: all_nodes
+    tasks:
+        -
+            name: 'Restart all servers (web and db) at once'
+            command: '/sbin/shutdown -r'
+-
+    name: 'Start the database services on db server nodes'
+    hosts: db_nodes
+    tasks:
+        -
+            name: 'Start the database services on db server nodes'
+            command: 'service mysql start'
+-
+    name: 'Start the web services on web server nodes'
+    hosts: web_nodes
+    tasks:
+        -
+            name: 'Start the web services on web server nodes'
+            command: 'service httpd start'
