@@ -1,0 +1,40 @@
+
+# SQL Servers
+sql_db1 ansible_host=sql01.xyz.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Lin$Pass
+sql_db2 ansible_host=sql02.xyz.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Lin$Pass
+
+# Web Servers
+web_node1 ansible_host=web01.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
+web_node2 ansible_host=web02.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
+web_node3 ansible_host=web03.xyz.com ansible_connection=winrm ansible_user=administrator ansible_password=Win$Pass
+
+# Grouping Servers
+
+# Database Servers
+[db_nodes]
+sql_db1
+sql_db2
+
+# Web Servers
+[web_nodes]
+web_node1
+web_node2
+web_node3
+
+# Servers Located on Boston
+[boston_nodes]
+sql_db1
+web_node1
+
+# Servers Located on Dallas
+[dallas_nodes]
+sql_db2
+web_node2
+web_node3
+
+# Grouping Servers with group
+
+# Servers Located on US Country by add Doston & Dallas as children no need to add with host again
+[us_nodes:children]
+boston_nodes
+dallas_nodes
