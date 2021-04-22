@@ -1,0 +1,36 @@
+-
+    name: 'Update nameserver entry into resolv.conf file on localhost'
+    hosts: localhost
+# Created Variables here
+    vars:
+        car_model: 'BMW M3'
+        country_name: 'USA'
+        title: 'Systems Engineer'
+    tasks:
+        -
+            name: 'Print my car model'
+            # applied variables here car_model
+            command: 'echo "My car''s model is {{ car_model }} "'
+        -
+            name: 'Print my country'
+            # applied variables here country_name
+            command: 'echo "I live in the {{ country_name }} "'
+        -
+            name: 'Print my title'
+            # applied variables here title
+            command: 'echo "I work as a {{ title }} "'
+
+
+### You can also save variables in inventory.yaml file as follows
+###
+# car_model="BMW M3'
+# country_name='USA'
+# title='Systems Engineer'
+###
+### And use in this playbook.yaml
+###
+### And also use the below values in playbooks
+###
+# web1 ansible_host=hostname.domain.com ansible_port=80
+###
+### use like {{ ansible_port }} in playbooks
