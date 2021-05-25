@@ -39,10 +39,10 @@ class day {
         System.out.println(year + "/" + month + "/" + day + " " + hour + ":" + minute);
     }
 }
-
-compile
+~~~
+compile and run
+~~~sh
 [root@tomcat8 ] javac day.java
-run
 [root@tomcat8 ] java day
 2021/5/08 20:37
 ~~~
@@ -58,7 +58,7 @@ Create user for tomcat and grand permission to `/usr/tomcat8`
 [root@tomcat8 ] useradd -M -d /usr/tomcat8 tomcat8
 [root@tomcat8 ] chown -R tomcat8. /usr/tomcat8
 ~~~
-Create a Systemd Setting file.
+Create a Systemd Setting file to start and stop tomcat service with `service` or `systemctl` commands.
 ~~~sh
 [root@tomcat8 ] vi /usr/lib/systemd/system/tomcat8.service
 # create new
@@ -84,6 +84,7 @@ Now Start and enable the tomcat8 systemd service
 ~~~
 open the web browers and access website ``http://(server's hostname or IP address):8080/``
 
+![](tomcat8.png)
 Create a test servlet that shows current day and time and make sure if it works normally.
 ~~~sh
 [root@tomcat8 ] mkdir /usr/tomcat8/webapps/ROOT/WEB-INF/classes
@@ -127,7 +128,7 @@ Configure on tomcat configuration files
 ~~~
 Access to ``http://(server's hostname or IP address):8080/daytime`` to make sure it works normally.
 
-[BROWSER IMAGE HERE]
+![](tomcat8-day.png)
 ### Create Tomcat User
 adding following lines to ``/usr/tomcat8/config/tomcat-users.xml`` in between ``<tomcat-users> .... </tomcat-users>`` tags
 ~~~sh
