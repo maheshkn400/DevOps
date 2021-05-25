@@ -4,9 +4,9 @@ Table of Content
 <!--ts-->
 * [About Ansible](#About Ansible)
 * Installation
-  * [Installation on Redhat, CentOS and Fedora](Installation_Ansible_on_Redhat_CentOS_Fedora.md)
-  * [Installation on Ubuntu](Installation_Ansible_on_Ubuntu.md)
-  * [Installation on Debian](Installation_Ansible_on_Debian.md)
+  * [Installation on Redhat, CentOS and Fedora](Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md)
+  * [Installation on Ubuntu](Ansible_installation/Installation_Ansible_on_Ubuntu.md)
+  * [Installation on Debian](Ansible_installation/Installation_Ansible_on_Debian.md)
 <!--te-->
 
 ### About Ansible
