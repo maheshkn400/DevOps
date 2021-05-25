@@ -84,7 +84,7 @@ Now Start and enable the tomcat8 systemd service
 ~~~
 open the web browers and access website ``http://(server's hostname or IP address):8080/``
 
-![](tomcat8.png)
+![](img/tomcat8.png)
 
 Create a test servlet that shows current day and time and make sure if it works normally.
 ~~~sh
@@ -129,7 +129,7 @@ Configure on tomcat configuration files
 ~~~
 Access to ``http://(server's hostname or IP address):8080/daytime`` to make sure it works normally.
 
-![](tomcat8-day.png)
+![](img/tomcat8-day.png)
 ### Create Tomcat User
 adding following lines to ``/usr/tomcat8/config/tomcat-users.xml`` in between ``<tomcat-users> .... </tomcat-users>`` tags
 ~~~sh
