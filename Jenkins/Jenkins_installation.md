@@ -47,12 +47,12 @@ compile and run
 2021/5/08 20:37
 ~~~
 ## NOW TIME TO INSTALL JENKINES
-get Jenkins official repository
+get and add Jenkins official repository to `yum` repo
 ~~~sh
 [root@jenkins ] cd /etc/yum.repos.d
 [root@jenkins yum.repos.d] curl -O https://pkg.jenkins.io/redhat-stable/jenkins.repo
 ~~~
-get GPG key and install Jenkins
+Import jenkins repository GPG key with `rpm` command and install Jenkins
 ~~~sh
 [root@jenkins yum.repos.d] rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 [root@jenkins yum.repos.d] yum -y install jenkins
@@ -68,25 +68,27 @@ success
 ~~~
 Access to ``https://(server hostname or IP address):8080/`` with Web browser from localhost or any Client Host, then, initial admin password is required to enter initial setup. Make sure initial admin password that is saved in ``/var/lib/jenkins/secrets/initialAdminPassword`` and input it to enter setup.
 
-![](jenkins-1.png)
+![](jenkins-01.png)
 
 This is Jenkins initial setup. Select to install suggested plugins or to install from your own selected plugins. (proceed with [SKIP] on this example)
 
 ![](jenkins-plugins.png)
 
-If you'd like to change Jenkins URL, change it on here. (proceed with SKIP on this example)
+If you'd like to change Jenkins URL, change it on here. (proceed with `Not now` on this example)
 
 ![](jenkins-url.png)
 
-Initial setup finished. Click [Start using Jenkins] button to move Jenkins main page.
+Initial setup finished. Click `Start using Jenkins` button to move Jenkins main page.
 
-[FIG HERE]
+![](jenkins-setup-finish.png)
 
 This is the Jenkins index page.
 
-[FIG HERE]
+![](jenkins-indexpage.png)
 
 Change the admin password
+
+[PORCESS HERE]
 
 Installation ``Deploy over container`` plugin.
 
