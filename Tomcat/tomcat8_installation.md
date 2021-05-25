@@ -1,5 +1,5 @@
 
-# Installation of tomcat8
+# Installation of Tomcat 8
 ## Installaion JDK 8
 ~~~sh
 [root@tomcat8 ] yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
