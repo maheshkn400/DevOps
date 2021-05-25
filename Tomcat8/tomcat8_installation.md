@@ -1,6 +1,6 @@
 
 # Installation of tomcat8
-Installaion JDK 8
+## Installaion JDK 8
 ~~~sh
 [root@tomcat8 ] yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 [root@tomcat8 ] cat > /etc/profile.d/java8.sh <<EOF
@@ -46,7 +46,7 @@ run
 [root@tomcat8 ] java day
 2021/5/08 20:37
 ~~~
-# Now Time to Installation of Tomcat 8
+## Now Time to Installation of Tomcat 8
 Download , unzip and move the tomcat 8
 ~~~sh
 [root@tomcat8 ] wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.20/bin/apache-tomcat-8.0.20.tar.gz
