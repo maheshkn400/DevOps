@@ -85,3 +85,5 @@ Initial setup finished. Click `Start using Jenkins` button to move Jenkins main 
 This is the Jenkins index page.
 
 ![](img/jenkins-indexpage.png)
+
+:arrow_right: [Jenkins](../Jenkins) or [DevOps  :house: ](https://github.com/maheshkn400/DevOps/)
