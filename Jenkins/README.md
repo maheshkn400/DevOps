@@ -5,4 +5,7 @@ Jenkins is a free and open source automation server. It helps automate the parts
 
 Table Of Content
 ================
-	- [Installation](Jenkins_installation.md)
+
+<!--ts-->
+- [Installation](Jenkins_installation.md)
+<!--te-->
