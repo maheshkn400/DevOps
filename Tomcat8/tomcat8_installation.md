@@ -85,6 +85,7 @@ Now Start and enable the tomcat8 systemd service
 open the web browers and access website ``http://(server's hostname or IP address):8080/``
 
 ![](tomcat8.png)
+
 Create a test servlet that shows current day and time and make sure if it works normally.
 ~~~sh
 [root@tomcat8 ] mkdir /usr/tomcat8/webapps/ROOT/WEB-INF/classes
