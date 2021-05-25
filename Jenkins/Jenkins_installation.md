@@ -66,17 +66,17 @@ success
 [root@jenkins ~] firewall-cmd --reload
 success
 ~~~
-Access to ``https://(server's hostname or IP address):8080/`` with Web browser from localhost or any Client Host, then, initial admin password is required to enter initial setup. Make sure initial admin password that is saved in ``/var/lib/jenkins/secrets/initialAdminPassword`` and input it to enter setup.
+Access to ``https://(server hostname or IP address):8080/`` with Web browser from localhost or any Client Host, then, initial admin password is required to enter initial setup. Make sure initial admin password that is saved in ``/var/lib/jenkins/secrets/initialAdminPassword`` and input it to enter setup.
 
-[FIG HERE]
+![](jenkins-1.png)
 
 This is Jenkins initial setup. Select to install suggested plugins or to install from your own selected plugins. (proceed with [SKIP] on this example)
 
-[FIG HERE]
+![](jenkins-plugins.png)
 
 If you'd like to change Jenkins URL, change it on here. (proceed with SKIP on this example)
 
-[FIG HERE]
+![](jenkins-url.png)
 
 Initial setup finished. Click [Start using Jenkins] button to move Jenkins main page.
 
