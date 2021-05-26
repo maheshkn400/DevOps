@@ -1,4 +1,4 @@
-# Installation of Ansible
+# Ansible
 ![Asible](img/Ansible_logo.png)
 
 Table of Content
