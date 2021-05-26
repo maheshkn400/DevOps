@@ -71,3 +71,7 @@ sudo systemctl enable docker
 ~~~sh
  sudo docker run hello-world
 ~~~
+
+### Install On Other Platforms
+* [Install on Amazon Linux](./install_docker_on_Amazon_linux.md)
+* [Install on Ubuntu](./install_docker_on_ubuntu.md)
