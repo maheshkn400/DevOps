@@ -11,7 +11,7 @@ Table Of Content
 * Installation
   * [Installation of Tomcat 8](tomcat8_installation.md)
 <!--te-->
-<a name='about_tomcat' />
+<a name="about_tomcat"></a>
 
 ## About Apache Tomcate
 
