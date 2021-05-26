@@ -6,9 +6,9 @@ Table of Content
 <!--ts-->
 * [About Git](#about_git)
 * Installation
-  * [Install Git on Linux](install_git_on_linux.md)
-  * [Install Git on Mac](install_git_on_mac.md)
-  * [Install Git on Windows](install_git_on_windows.md)
+  * [Install Git on Linux](installation/install_git_on_linux.md)
+  * [Install Git on Mac](installation/install_git_on_mac.md)
+  * [Install Git on Windows](installation/install_git_on_windows.md)
 * [Git Cheat Sheet](git-cheat-sheet-education.pdf) from github
 <!--te-->
 
