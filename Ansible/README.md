@@ -1,4 +1,6 @@
 # Installation of Ansible
+![Asible](img/Ansible_logo.png)
+
 Table of Content
 ================
 <!--ts-->
