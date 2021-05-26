@@ -18,3 +18,7 @@ You can install Git on Linux through the package management tool that comes with
 4. Once the command output has completed, you can verify the installation by typing: `git version`.
 
 Note: You can download the proper Git versions and read more about how to install on specific Linux systems, like installing Git on Ubuntu or Fedora, [in git-scm's documentation](https://git-scm.com/download/linux).
+
+### Install On Other Platforms
+* [Install on mac](./install_git_on_mac.md)
+* [Install on windows](./install_git_on_windows.md)
