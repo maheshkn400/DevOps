@@ -1,5 +1,8 @@
 # DevOps
 #### _Learn, Develop and Backup_
+
+![DevOps](img/devops-toolchain.png)
+
 Table of contents
 =================
 <!--ts-->
