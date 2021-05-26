@@ -20,3 +20,7 @@ Once the command output has completed, you can verify the installation by typing
 #### Other Methods of Installing Git
 
 Looking to install Git via the source code? [Learn more here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) .
+
+### Install On Other Platforms
+* [Install on Linux](./install_git_on_linux.md)
+* [Install on windows](./install_git_on_windows.md)
