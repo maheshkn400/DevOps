@@ -9,4 +9,6 @@ $ sudo add-apt-repository --yes --update ppa:ansible/ansible
 $ sudo apt install ansible
 ~~~
 
-:arrow_right: [Ansible](https://github.com/maheshkn400/DevOps/tree/master/Ansible) or [DevOps :house: ](https://github.com/maheshkn400/DevOps/)
+### Install On Other Platforms
+* [Install on Debian](../Ansible_installation/Installation_Ansible_on_Debian.md)
+* [Install on Redhat, CentOS and Fedora](../Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md)
