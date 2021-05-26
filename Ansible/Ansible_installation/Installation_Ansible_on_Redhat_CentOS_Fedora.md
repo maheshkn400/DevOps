@@ -25,6 +25,7 @@ On RHEL:
 ~~~sh
 $ sudo yum install ansible
 ~~~
-:eight_pointed_black_star: RPMs for currently supported versions of RHEL and CentOS are also available from [EPEL](https://fedoraproject.org/wiki/EPEL). :eight_pointed_black_star:
 
-:arrow_right: [Ansible](https://github.com/maheshkn400/DevOps/tree/master/Ansible) or [DevOps :house: ](https://github.com/maheshkn400/DevOps/)
+### Install On Other Platforms
+* [Install on Debian](../Ansible_installation/Installation_Ansible_on_Debian.md)
+* [Install on Ubuntu](../Ansible_installation/Installation_Ansible_on_Ubuntu.md)
