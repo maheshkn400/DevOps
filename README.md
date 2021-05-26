@@ -13,5 +13,6 @@ Table of contents
    * [Maven](./Maven)
      * [Installation](https://github.com/maheshkn400/DevOps/blob/master/Maven/Maven_installation.md)
    * [Tomcat](./Tomcat)
-     * [Installation of Tomcat 8](https://github.com/maheshkn400/DevOps/blob/master/Tomcat/tomcat8_installation.md)
+     * Installation
+       * [Installation of Tomcat 8](https://github.com/maheshkn400/DevOps/blob/master/Tomcat/tomcat8_installation.md)
 <!--te-->
