@@ -10,7 +10,7 @@ Table of Content
   * [Installation on Ubuntu](Ansible_installation/Installation_Ansible_on_Ubuntu.md)
   * [Installation on Debian](Ansible_installation/Installation_Ansible_on_Debian.md)
 <!--te-->
-<a name="about_ansible"/>
+<a name="about_ansible"></a>
 
 ### About Ansible
 
