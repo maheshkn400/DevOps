@@ -2,7 +2,7 @@
 
 Debian users may leverage the same source as the Ubuntu PPA.
 
-Add the following line to ``/etc/apt/sources.list`:
+Add the following line to /etc/apt/sources.list`:
 ~~~
 deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
 ~~~
@@ -13,4 +13,6 @@ $ sudo apt update
 $ sudo apt install ansible
 ~~~
 
-:arrow_right: [Ansible](https://github.com/maheshkn400/DevOps/tree/master/Ansible) or [DevOps :house: ](https://github.com/maheshkn400/DevOps/)
+### Install On Other Platforms
+* [Install on Redhat, CentOS and Fedora](../Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md)
+* [Install on Ubuntu](../Ansible_installation/Installation_Ansible_on_Ubuntu.md)
