@@ -35,11 +35,11 @@ sudo apt-get remove docker docker-engine docker.io containerd runc
 ~~~
 2. Add Docker’s official GPG key:
 ~~~sh
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ~~~
 3. Use the following command to set up the stable repository.
 ~~~sh
-echo \
+sudo echo \
  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
  ~~~
@@ -50,13 +50,17 @@ echo \
  ~~~
 5. Start the Docker service
 ~~~sh
-systemctl start docker
+sudo systemctl start docker
 ~~~
 or
 ~~~sh
-service docker start
+sudo service docker start
 ~~~
 6. Enable `docker` service to start on startup.
 ~~~sh
-systemctl enable docker
-~~~ 
+sudo  systemctl enable docker
+~~~
+7. Verify that Docker Engine is installed correctly by running the `hello-world` image.
+~~~sh
+sudo docker run hello-world
+~~~
