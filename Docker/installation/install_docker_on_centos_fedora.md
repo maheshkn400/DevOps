@@ -63,7 +63,11 @@ If prompted to accept the GPG key, verify that the fingerprint matches 060A 61C5
 ~~~sh
 sudo systemctl start docker
 ~~~
-3. Verify that Docker Engine is installed correctly by running the `hello-world` image.
+3. Enable `docker` service on system startup.
+~~~sh
+sudo systemctl enable docker
+~~~
+4. Verify that Docker Engine is installed correctly by running the `hello-world` image.
 ~~~sh
  sudo docker run hello-world
 ~~~
