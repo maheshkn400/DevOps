@@ -7,12 +7,12 @@ Table Of Content
 ================
 
 <!--ts-->
-* [About](#about)
+* [About Apache Tomcat](#about_tomcat)
 * [Installation of Tomcat 8](tomcat8_installation.md)
 <!--te-->
-<a name='aout' />
+<a name='about_tomcat' />
 
-## about
+## About Apache Tomcate
 
 Apache Tomcat (called "Tomcat" for short) is a free and open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.[2] Tomcat provides a "pure Java" HTTP web server environment in which Java code can run.
 
