@@ -8,9 +8,9 @@ Table of Content
 * [About](#about)
 * Installation
   * [Docker Installation on Amazon Linux](installation/install_docker_on_Amazon_linux.md)
-  * Docker installation on Debian
+  * [Docker Installation on CentOS and Fedora](installation/install_docker_on_centos_fedora)
   * [Docker installation on Ubuntu](installation/install_docker_on_ubuntu.md)
-  * Docker Installation on Redhat, CentOS and Fedora
+
 <!--te-->
 <a name="about"></a>
 
