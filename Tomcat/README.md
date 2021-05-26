@@ -8,7 +8,8 @@ Table Of Content
 
 <!--ts-->
 * [About Apache Tomcat](#about_tomcat)
-* [Installation of Tomcat 8](tomcat8_installation.md)
+* Installation
+  * [Installation of Tomcat 8](tomcat8_installation.md)
 <!--te-->
 <a name='about_tomcat' />
 
