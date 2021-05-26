@@ -12,7 +12,7 @@ Table of Content
 * [Git Cheat Sheet](git-cheat-sheet-education.pdf) from github
 <!--te-->
 
-<a name="about_git" />
+<a name="about_git"></a>
 
 #### About Git
 
