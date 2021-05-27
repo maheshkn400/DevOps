@@ -8,7 +8,7 @@ Table of Content
 * [About](#about)
 * Installation
   * [Install kubernetes cluster on AWS](installation/install_kubernetes_cluster_on_aws.md)
-* [example-votingapp](voting-app)
+* example [voting-app](voting-app) deploy scripts
 <!--te-->
 <a name="about"></a>
 
