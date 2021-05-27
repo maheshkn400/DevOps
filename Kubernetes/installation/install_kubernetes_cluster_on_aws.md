@@ -81,5 +81,5 @@ kubectl get services -o wide
 ~~~
 3. Don't forgot To delete cluster after practice otherwise AWS will cost
 ~~~sh
-kops delete cluster dev.k8s.valaxy.in --yes
+kops delete cluster dev.k8s.mkn400.tk --yes
 ~~~
