@@ -7,7 +7,7 @@ Table of Content
 <!--ts-->
 * [About](#about)
 * Installation
-  * [Install kubernetes cluster on AWS](installation/install_kubernetes_cluster_on_aws.md)
+  * [Install kubernetes cluster on AWS](installation/install_kubernetes_cluster_on_aws_use_kops.md) using `kops`
 * example [voting-app](voting-app) and [voting-app-v2](voting-app-v2) deploy scripts
 <!--te-->
 <a name="about"></a>
