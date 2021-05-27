@@ -1,4 +1,4 @@
-# Install Kubernetes cluster on AWS
+# Install Kubernetes cluster on AWS using `kops`
 
 1. Create Ubuntu EC2 instance
 
