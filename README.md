@@ -3,7 +3,7 @@
 
 ![DevOps](img/devops-toolchain.png)
 
-Table of contents
+Table of content
 =================
 <!--ts-->
 * Ansible Installation on [Redhat, CentOS and Fedora](Ansible/Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md) , [Ubuntu](Ansible/Ansible_installation/Installation_Ansible_on_Ubuntu.md), [Debian](Ansible/Ansible_installation/Installation_Ansible_on_Debian.md)
