@@ -7,7 +7,7 @@
 
 ### Producton Environment Setup:
 
-1. kubeadm
+1. kubeadm on Linux and Windows
 1. [kops](./install_kubernetes_cluster_on_aws_use_kops.md) ( Works for only AWS)
 1. Kubespray
 
