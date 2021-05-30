@@ -70,7 +70,7 @@ Access to ``https://(server hostname or IP address):8080/`` with Web browser fro
 
 ![](img/jenkins-01.png)
 
-This is Jenkins initial setup. Select to install suggested plugins or to install from your own selected plugins. (proceed with [SKIP] on this example)
+This is Jenkins initial setup. Select to install suggested plugins or to install from your own selected plugins. (proceed with [SKIP] on this example by selecting `x` icon on top-right of the page)
 
 ![](img/jenkins-plugins.png)
 
