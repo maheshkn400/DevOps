@@ -74,10 +74,6 @@ This is Jenkins initial setup. Select to install suggested plugins or to install
 
 ![](img/jenkins-plugins.png)
 
-If you'd like to change Jenkins URL, change it on here. (proceed with `Not now` on this example)
-
-![](img/jenkins-url.png)
-
 Initial setup finished. Click `Start using Jenkins` button to move Jenkins main page.
 
 ![](img/jenkins-setup-finish.png)
