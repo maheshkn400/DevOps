@@ -1,0 +1,32 @@
+docker run centos /bin/bash -c "yum -y update; yum -y install httpd"
+
+docker commit d5fa483a5c71 my_image/c
+
+docker run my_image/centos8_httpd /usr/bin/which httpd
+
+docker run -it -p 8081:80 my_image/centos8_httpd /bin/bash
+
+ddocker run --name some-wordpress -p 8080:80 -d wordpress
+
+docker run --name mywp -p 80:80 -d wordpress
+
+
+docker run --name mywp -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=secretpw -p 80:80 -d wordpress
+
+docker run --name mywp --link mysqlsrv:mysql -p 80:80 -d wordpress
+
+docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=secretpw -d mysql
+
+docker run --name mywp --link mysqlsrv:mysql -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=secretpw -p 80:80 -d wordpress
+
+
+
+
+Firt you want to start MYSQL docker contailner
+
+ docker run --name some-name -e MYSQL_ROOT_PASSWORD=<set-root-pwd> -d mysql:tag
+docker run --name mysqlsrv -e MYSQL_ROOT_PASSWORD=secretpw -d mysql:5.7
+
+docker exec -it mysqlsrv mysql -u root -p
+
+docker run --name mywp --link mysqlsrv:mysql -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=secretpw -p 80:80 -d wordpress

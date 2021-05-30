@@ -1,0 +1,9 @@
+docker exec -it mysqlsrv mysql -u root -p
+
+CREATE DATABASE wordpress2;
+GRANT ALL PRIVILEGES ON wordpress2.* TO "wpuser"@"loclhost" IDENTIFIED BY "wppasswp";
+GRANT ALL PRIVILEGES ON wordpress2.* TO "wpuser"@"%" IDENTIFIED BY "wppasswp";
+FLUSH PRIVILEGES;
+EXIT
+
+docker run --name mywp2 --link mysqlsrv:mysql -e WORDPRESS_DB_HOST=localhost -e WORDPRESS_DB_NAME=wordpress2 -e WORDPRESS_DB_USER=wpuser -e WORDPRESS_DB_PASSWORD=wppasswp -p 80:80 -d wordpress
