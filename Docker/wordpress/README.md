@@ -11,7 +11,7 @@ mv wordpress.yml docker-compose.yml
 ~~~
 Run the following command to create and up the containers with detach mode
 ~~~sh
-dockerc compose up -d
+docker compose up -d
 ~~~
 Check the containers with `wordpress` name two containers available with port 80 expose
 ~~~sh
