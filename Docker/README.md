@@ -7,6 +7,7 @@ Table of Content
 <!--ts-->
 * [About](#about)
 * [Docker Commands](./Docker-commands.md)
+* Docker compose [WordPress](./wordpress/wordpress.yml) `YAML` script
 * Installation
   * [Docker Installation on Amazon Linux](installation/install_docker_on_Amazon_linux.md)
   * [Docker Installation on CentOS and Fedora](installation/install_docker_on_centos_fedora)
