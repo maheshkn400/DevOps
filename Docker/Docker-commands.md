@@ -48,6 +48,11 @@ commit the changes before push
 docker commit <hub-user/repo-name:tag>
 docker commit mkn400/ubuntu:20.04
 ~~~
+Create image from container
+~~~sh
+docker commit CONTAINER-NAME <docker_account_id>/container:<tage_name>
+docker commit webapp mkn400/ubuntu:apache2
+~~~
 save image to tar file
 ~~~sh
 docker save image >> file
