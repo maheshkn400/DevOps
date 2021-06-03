@@ -1,6 +1,6 @@
 # Simple DevOps Project 5
 
-In this project we are going to create Jenkins CI / CD to deploy `webapp.war` application to `kubernetes` server via `ansible playbooks`. It will creat `tomcat` `docker` image with `webapp.war` file and push image to `docker hub` repo and pull from `kubernetes master server`.
+In this project we are going to create Jenkins CI / CD to deploy `webapp.war` application to `kubernetes` server via `ansible playbooks`. It will create `tomcat` `docker` image with `webapp.war` file and push image to `docker hub` repo and pull from `kubernetes master server`.
 
 ![DevOps Project 5](img/devops-project-5.png)
 
