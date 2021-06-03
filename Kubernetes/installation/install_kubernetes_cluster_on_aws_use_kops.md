@@ -2,7 +2,7 @@
 
 1. Create Ubuntu EC2 instance
 
-2. Install `awsci`
+2. Install `awscli`
 ~~~sh
  curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
  apt install unzip python
@@ -16,9 +16,9 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
  chmod +x ./kubectl
  sudo mv ./kubectl /usr/local/bin/kubectl
 ~~~
-4. Create an IAM user/role with Route53, EC2, IAM and S3 full access
+4. Create an IAM user/role with Route53, EC2, IAM and S3 full access. In my case I create role name called `k8s-role`
 
-5. Attach IAM role to ubuntu server
+5. Attach IAM user/role to ubuntu server
 
  **Note:** If you create IAM user with programmatic access then provide Access keys.
 ~~~sh
@@ -46,7 +46,7 @@ or
 #set variable for permanent
 echo "export KOPS_STATE_STORE=s3://dev.k8s.mkn400.tk" >> /etc/profile
 ~~~
-10. Create sshkeys before creating cluster
+10. Create SSH keys before creating cluster
 ~~~sh
 ssh-keygen
 ~~~
