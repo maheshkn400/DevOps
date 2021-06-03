@@ -15,6 +15,9 @@ Table of content
 * Kubernetes [cluster install on aws](Kubernetes/installation/install_kubernetes_cluster_on_aws_use_kops.md) using `kops` and example [voting-app](Kubernetes/voting-app/) and [voting-app-v2](Kubernetes/voting-app-v2/) deploy scripts
 * Maven [Installation](https://github.com/maheshkn400/DevOps/blob/master/Maven/Maven_installation.md)
 * Tomcat [Installation of Tomcat 8](https://github.com/maheshkn400/DevOps/blob/master/Tomcat/tomcat8_installation.md)
+
+**Simple Devops Projects**
+  - [Simple Devops Project](./Devops-projects/simple-devops-project-5/) tools include with `Git`, `github`, `Jenkins`, `Maven`, `Ansible`, `Docker hub` and `kubernetes cluster`.
 <!--te-->
 
 ##### Get More Help With [YouTube](https://www.youtube.com/channel/UC9fVFNlg3aKXTsEsib5Mvag?sub_confirmation=1) videos or [DevOps](https://www.youtube.com/playlist?list=PLPo2XyZnmQuwTdLgTyUxeVsjwZ5Iwm-SD) Playlist
