@@ -8,7 +8,7 @@ Setup and Ready the following servers and account.
 
 - [Jenkins server](../../Jenkins/Jenkins_installation.md) and [Maven](../../Maven/Maven_installation.md) install in single server.
 - [Ansible server](../../Ansible/Ansible_installation)
-- [Kubernetes server](../../Kubernetes/installation/install_kubernetes_cluster_on_aws_use_kops.md)
+- [Kubernetes server](../../Kubernetes/installation/install_kubernetes_cluster_on_aws_use_kops.md) with `kops` (works only on `AWS`)
 - A [Docker Hub](https://hub.docker.com/  ) account and create `simple-devops-image` repository.
 
 ## Setup on kubernetes master servers
