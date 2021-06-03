@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mkn400-service
+  labels:
+    app: mkn400-devops-project
+spec:
+  selector:
+    app: mkn400-devops-project
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200
