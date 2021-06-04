@@ -6,7 +6,7 @@
 
 - [Jenkins](../../Jenkins/Jenkins_installation.md) with [Maven](../../Maven/Maven_installation.md) Server
 - [Docker](../../Docker/installation/) host
-- Intall [Publish over ssh](#publish_over_ssh) Plugin
+- Install [Publish over ssh](#publish_over_ssh) Plugin
 - [Enable connection](#enable_ssh) between Docker and Jenkins
 - [Create user](#create_user) on Docker Host
 
