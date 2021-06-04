@@ -7,7 +7,7 @@ In this project we are creating Jenkins CI CD of `git` > `github` > `jenkins` > 
 **Prerequisites**
 
 - EC2 instance with [tomcat 8 installed](../../Tomcat/tomcat8_installation.md)
-- [Jenkins server](../../Jenkins/Jenkins_installation.md)
+- [Jenkins](../../Jenkins/Jenkins_installation.md) with [Maven](../../Maven/Maven_installation.md) Server
 - [Deploy to container](#deploy_to_container) plugin installed
 - [Setup Tomcat Credentials](#tomcat_credentials)
 
@@ -47,7 +47,7 @@ To deploy our build artifacts on tomcat server our Jenkins server need access. F
       - WAR/EAR files : `**/*.war`
       - Containers : `Tomcat 8.x`
         - Credentials: `Tomcat_user` # (which created in above step)
-        - Tomcat URL : `http://<PUBLIC_IP>:<PORT_NO>`
+        - Tomcat URL : `http://<PRIVATE_IP>:<PORT_NO>`
 
 Save and run the job now.
 
