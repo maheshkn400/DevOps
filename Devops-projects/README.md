@@ -1,6 +1,7 @@
 # DevOps Projects
 
-- [Simple DevOps Project 2](./simple-devops-project-1)
+- [Simple DevOps Project 1](./simple-devops-project-1)
+- [Simple DevOps Project 2](./simple-devops-project-2)
 - [Simple DevOps Project 5](./simple-devops-project-5)
 
 
