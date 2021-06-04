@@ -32,22 +32,22 @@ Test the connection by clicking `Test Connection` and save
 
 **Create Playbooks**
 
-Create dicrectory `playbooks` on `/opt`
-~~~sh
-mkdir /opt/playbooks
-~~~
-Create a `copywarfile.yml` playbook file under `/opt/playbooks` directory on Ansible server
-~~~sh
-# copywarfile.yml
----
-- hosts: all
-  become: true
-  tasks:
-    - name: copy jar/war onto tomcat servers
-        copy:
-          src: /opt/playbooks/wabapp/target/webapp.war
-          dest: /usr/tomcat8/webapps
-~~~
+- Create dicrectory `playbooks` on `/opt`
+  ~~~sh
+  mkdir /opt/playbooks
+  ~~~
+- Create a `copywarfile.yml` playbook file under `/opt/playbooks` directory on Ansible server
+  ~~~sh
+  # copywarfile.yml
+  ---
+  - hosts: all
+    become: true
+    tasks:
+      - name: copy jar/war onto tomcat servers
+          copy:
+            src: /opt/playbooks/wabapp/target/webapp.war
+            dest: /usr/tomcat8/webapps
+  ~~~
 
 <a name="ssh_key"></a>
 **Create `SSH key` and copy to `Tomcat server`**
