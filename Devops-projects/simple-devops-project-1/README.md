@@ -1,6 +1,6 @@
 # Simple DevOps Project 1
 
-In this project we are createing Jenkins CI CD of `git` > `github` > `jenkins` > `maven` to `build` war file > `tomcat 8 server` deploy '.war' file to it with `deploy to container` plugin.
+In this project we are creating Jenkins CI CD of `git` > `github` > `jenkins` > `maven` to `build` war file > deploy to `tomcat 8 server` with `deploy to container` plugin.
 
 ![Simple DevOps Project 01](./img/devops-1.png)
 
