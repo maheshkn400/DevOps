@@ -7,7 +7,7 @@ In this project we are creating Jenkins CI CD of `git` > `github` > `jenkins` > 
 **Prerequisites**
 
 - [Ansible server ](../../Ansible/Ansible_installation/)
-  - [Create playbook](playbook)
+  - [Create playbook](#playbook)
 - [Jenkins Server](../../Jenkins/Jenkins_installation.md)
   - Intall [Publish over ssh](#publish_over_ssh) Plugin
   - [Enable connection](#enable_ssh) between Ansible and Jenkins
