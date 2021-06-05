@@ -82,4 +82,13 @@ This is the Jenkins index page.
 
 ![](img/jenkins-indexpage.png)
 
+Set Java Envirnoment variable `PATH`
+
+Jenkins Dashboard >> `Manage Jenkins` > `Global Tool Configuration` > `JDK` > click `JDK installation` button > uncheck `install automatically`
+  - Name : `JDK8`
+  - JAVA_HOME: `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/`
+  - Click Apply and save
+
+![Jenkins JDK path](./img/jenkins_jdk_path.png)
+
 :arrow_right: [Jenkins](../Jenkins) or [DevOps  :house: ](https://github.com/maheshkn400/DevOps/)
