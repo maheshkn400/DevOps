@@ -82,7 +82,7 @@ This is the Jenkins index page.
 
 ![](img/jenkins-indexpage.png)
 
-Set Java Envirnoment variable `PATH`
+## Set Java Envirnoment variable `PATH`
 
 Jenkins Dashboard >> `Manage Jenkins` > `Global Tool Configuration` > `JDK` > click `JDK installation` button > uncheck `install automatically`
   - Name : `JDK8`
