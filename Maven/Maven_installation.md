@@ -74,4 +74,12 @@ Java home: /usr/java/jdk1.8.0_71/jre/
 Default locale: en_US, platform encoding: UTF-8
 ~~~
 
+### Integrate Maven on Jenkins
+Jenkins Dashboard >> `Manage Jenkins` > `Global Tool Configuration` > `Maven` > click `JDK installations` button
+- Name: `Maven`
+- MAVEN_HOME: `/opt/apache-maven-3.8.1/`
+- click apply and save
+
+![Maven path set](./img/maven-env-path-set.png)
+
 :arrow_right: [Maven](../Maven) or [DevOps  :house: ](https://github.com/maheshkn400/DevOps/)
