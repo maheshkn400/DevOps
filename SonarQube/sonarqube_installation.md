@@ -62,13 +62,10 @@ java day
 Download, install and enable mysql 5.7 [repo](https://dev.mysql.com/downloads/repo/yum/) for your linux destro
 ~~~sh
 yum install wget unzip -y
-wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
+sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 rpm --import /etc/pki/rpm-gpg/*
-# mysql 5.7 repo enable
-yum-config-manager --disable mysql0-community
-yum-config-manager --enable mysql57-community
 ~~~
+~~~sh
 Install mysql package
 ~~~sh
 yum install mysql-community-server
@@ -99,7 +96,7 @@ yum install mysql
 ~~~
 Allow RDS instance security group to access SonarQube server
 
-Connect to RDS instance with database credentials
+Connect to MYSQL server OR RDS instance with database credentials (my case `localhost`).
 ~~~sh
 mysql -h <MYSQL_SERVER_IP>:3306 -u root -p
 password:
@@ -145,7 +142,7 @@ if `unzip` not availab installed it as follow
 ~~~sh
 yum install unzip -y
 ~~~
-Edit sonar properties file to uncomment and provide required information for below properties.
+Edit sonar properties file to uncomment and provide required information for below properties. (my case `MYSQL_SERVER_IP` is `localhost`).
 ~~~SH
 vi /opt/sonar/conf/sonar.properties
   sonar.jdbc.username=sonaruser
@@ -159,7 +156,7 @@ Start SonarQube service
 cd /opt/sonar/bin/linux-x86-64/
 ./sonar.sh start
 ~~~
-When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/log/sonar.log` log.
+When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/logs/sonar.log` log.
 
 ![sonarqube DB table](./img/sonarqube_first_start.png)
 
@@ -184,8 +181,11 @@ Start SonarQube server
 ~~~sh
 service sonar start
 ~~~
-SonarQube application uses port 9000. access SonarQube from browser
+SonarQube application uses port 9000. access SonarQube from browser and login with username `admin`, password is `admin`
 `http://<sonarqube_server_PUBLIC_IP>:9000/sonar`
+
+Change the password after login
+Sonarqube homepage >> `administrator` top right > `MY Account` > `Security` Tab > Change password.
 
 ###  Troubleshooting
 
