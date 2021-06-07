@@ -65,7 +65,6 @@ yum install wget unzip -y
 sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 rpm --import /etc/pki/rpm-gpg/*
 ~~~
-~~~sh
 Install mysql package
 ~~~sh
 yum install mysql-community-server
