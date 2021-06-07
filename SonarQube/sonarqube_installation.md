@@ -110,13 +110,13 @@ CREATE DATABASE sonardb CHARACTER SET utf8 COLLATE utf8_general_ci;
 ~~~
 Create a local and a remote user for new database
 ~~~sh
-CREATE USER sonaruser@localhost IDENTIFIED BY 'SonarPass';
-CREATE USER sonaruser@'%' IDENTIFIED BY 'SonarPass';
+CREATE USER sonaruser@localhost IDENTIFIED BY 'SonarPass@123';
+CREATE USER sonaruser@'%' IDENTIFIED BY 'SonarPass@123';
 ~~~
 Grant database access permissions to users
 ~~~sh
-GRANT ALL ON sonaruser.* TO sonardb@localhost;
-GRANT ALL ON sonaruser.* TO sonardb@'%';
+GRANT ALL ON sonaruser.* TO sonaruser@localhost;
+GRANT ALL ON sonaruser.* TO sonaruser@'%';
 ~~~
 check users and databases
 ~~~sh
@@ -137,7 +137,7 @@ Download stable SonarQube version from below website.
 Download & unzip SonarQube 6.0
 ~~~sh
 cd /opt
-wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-6.0.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.0.zip
 unzip sonarqube-6.0.zip
 mv /opt/sonarqube-6.0 /opt/sonar
 ~~~
