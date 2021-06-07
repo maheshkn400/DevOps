@@ -71,7 +71,7 @@ yum-config-manager --enable mysql57-community
 ~~~
 Install mysql package
 ~~~sh
-yum install mysql-community
+yum install mysql-community-server
 ~~~
 start the mysql service
 ~~~sh
