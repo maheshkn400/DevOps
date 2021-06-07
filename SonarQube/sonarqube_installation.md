@@ -115,8 +115,8 @@ CREATE USER sonaruser@'%' IDENTIFIED BY 'SonarPass@123';
 ~~~
 Grant database access permissions to users
 ~~~sh
-GRANT ALL ON sonaruser.* TO sonaruser@localhost;
-GRANT ALL ON sonaruser.* TO sonaruser@'%';
+GRANT ALL ON sonardb.* TO sonaruser@localhost;
+GRANT ALL ON sonardb.* TO sonaruser@'%';
 ~~~
 check users and databases
 ~~~sh
