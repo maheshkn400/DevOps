@@ -97,6 +97,11 @@ Allow RDS instance security group to access SonarQube server
 
 Connect to MYSQL server OR RDS instance with database credentials (my case `localhost`).
 ~~~sh
+mysql -h <MYSQL_SERVER_IP> -u root -p
+password:
+~~~
+OR
+~~~sh
 mysql -h <MYSQL_SERVER_IP>:3306 -u root -p
 password:
 ~~~
@@ -137,7 +142,7 @@ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.0.zip
 unzip sonarqube-6.0.zip
 mv /opt/sonarqube-6.0 /opt/sonar
 ~~~
-if `unzip` not availab installed it as follow
+if `unzip` not available installed it as follow
 ~~~sh
 yum install unzip -y
 ~~~
@@ -155,7 +160,7 @@ Start SonarQube service
 cd /opt/sonar/bin/linux-x86-64/
 ./sonar.sh start
 ~~~
-When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/logs/sonar.log` log.
+When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/logs/sonar.log`.
 
 ![sonarqube DB table](./img/sonarqube_first_start.png)
 
