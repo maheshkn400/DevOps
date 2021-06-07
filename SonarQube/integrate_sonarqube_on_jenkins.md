@@ -19,10 +19,11 @@ sonar.host.url=http://<SONAR_SERVER_IP>:9000
 ~~~
 Login to Jenkins GUI console and install `SonarQube scanner` plugin
 - Jenksins Dashboard `Manage Jenkins` > `Manage Plugins` > `Avalable` > `SonarQube Scanner for Jenkins`
-Configure SonarQube scanner home path
 
+Configure SonarQube scanner home path
 - Jenkins Dashboard > `Manage Jenkins` > `Global Tool Configuration` > `SonarQube Scanner`
   - Name : `sonar_scanner`
+  - uncheck `install automatic`
   - SONAR_RUNNER_HOME : `/opt/sonar_scanner`
 
 Configure SonarQube server name and authentication token
@@ -33,9 +34,13 @@ ServerURL : `http://<Sonarqube_server_ip>:9000/sonar`
 Server authentication token To Get Authentication code follow below steps.
 - Login to SonarQube server as a admin `My Account` > `Security` > `Generate Token`
 
-Create a job to test SonarQube. Provide below sonar properties details in the job under build
+Create a `free style` job to test SonarQube. Provide below sonar properties details in the job under build
 
-- Build:
+- Soruce Code Management
+ - git
+   - Repositories
+     - Repository URL : https://github.com/maheshkn400/SimpleCustomerApp
+- Build
   - Execute SonarQube Scanner > Analysis properties (it is mandatary).
     - sonar.projectKey=mkn400
     - sonar.projectName=mkn400Demo
