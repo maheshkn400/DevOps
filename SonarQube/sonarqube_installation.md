@@ -148,11 +148,11 @@ yum install unzip -y
 Edit sonar properties file to uncomment and provide required information for below properties.
 ~~~SH
 vi /opt/sonar/conf/sonar.properties
-  sonar.jdbc.username=`sonaruser`
-  sonar.jdbc.password=`SonarPass`
-  sonar.jdbc.url=jdbc:mysql://`<MYSQL_SERVER_IP>:3306`/sonardb?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false
-  sonar.web.host=`0.0.0.0`
-  sonar.web.context=`/sonar`
+  sonar.jdbc.username=sonaruser
+  sonar.jdbc.password=SonarPass@123
+  sonar.jdbc.url=jdbc:mysql://<MYSQL_SERVER_IP>:3306/sonardb?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false
+  sonar.web.host=0.0.0.0
+  sonar.web.context=/sonar
 ~~~
 Start SonarQube service
 ~~~sh
