@@ -40,7 +40,7 @@ service nexus start
 
 Login nexus server from browser on port `8081`
 
-`http://<Nexus_server_IP:8081`
+`http://<Nexus_server_IP>:8081`
 
 Use default credentials to login
 
