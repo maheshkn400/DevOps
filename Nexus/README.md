@@ -1,4 +1,4 @@
-# NEXUS
+# NEXUS REPOSITORY MANAGER
 
 ![NEXUS](./img/NexusRepo_logo.png)
 
