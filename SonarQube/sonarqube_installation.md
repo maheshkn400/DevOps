@@ -159,7 +159,7 @@ Start SonarQube service
 cd /opt/sonar/bin/linux-x86-64/
 ./sonar.sh start
 ~~~
-When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/log/` log.
+When start service first time it will take little bit time to up and run the service after creating database tables as follows and wait upto `computer engine is up` from `/opt/sonar/log/sonar.log` log.
 
 ![sonarqube DB table](./img/sonarqube_first_start.png)
 
