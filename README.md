@@ -14,7 +14,7 @@ Table of content
 * Jenkins [Installation](https://github.com/maheshkn400/DevOps/blob/master/Jenkins/Jenkins_installation.md)
 * Kubernetes [cluster install on aws](Kubernetes/installation/install_kubernetes_cluster_on_aws_use_kops.md) using `kops` and example [voting-app](Kubernetes/voting-app/) and [voting-app-v2](Kubernetes/voting-app-v2/) deploy scripts
 * Maven - [Installation](https://github.com/maheshkn400/DevOps/blob/master/Maven/Maven_installation.md)
-* NexusRepo - [Installation](./Nexus/nexus_installation.md)
+* Nexus Repository - [Installation](./Nexus/nexus_installation.md) and [Integration On Jenkins](./Nexus/nexus_repository_integration_with_jenkins.md)
 * Sonarqube - [Installation](./SonarQube/sonarqube_installation.md) and [Integrate on Jenkins](./SonarQube/integrate_sonarqube_on_jenkins.md)
 * Tomcat [Installation of Tomcat 8](https://github.com/maheshkn400/DevOps/blob/master/Tomcat/tomcat8_installation.md)
 
