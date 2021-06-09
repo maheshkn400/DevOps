@@ -4,7 +4,7 @@
 
 - Jenkins Dashboard >> `Manage Jenkins` > `Manage plugins` > click `Available` tab and search for `Nexus Artifact Uploader` and click `install without restart` button.
 
-![nexu plugin jenkins](./img/nexus_plugin_jenkins.png)
+![nexu plugin jenkins](./img/nexus_plugin_for_jenkins.png)
 
 ### Create Sample Jenkins Job To Test
 
