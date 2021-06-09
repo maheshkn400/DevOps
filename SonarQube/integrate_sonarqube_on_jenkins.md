@@ -34,7 +34,7 @@ ServerURL : `http://<Sonarqube_server_ip>:9000/sonar`
 Server authentication token To Get Authentication code follow below steps.
 - Login to SonarQube server as a admin `My Account` > `Security` > `Generate Token`
 
-Create a `Free Style` job to test SonarQube. Provide below sonar properties details in the job under build
+Create a `Freestyle project` job to test SonarQube. Provide below sonar properties details in the job under build
 
 - Soruce Code Management
  - git
