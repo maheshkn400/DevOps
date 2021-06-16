@@ -63,4 +63,4 @@ Save the job and modify the code in GitHub. Then you could see your job get trig
 
 :warning: **Important** - For lab we done "Build Triggers" schedule every 2 min to trigger but in real time it is not recommended. It depends upon the appliation and client requirement. We will schedule it every night in non-production time or week ends or some projects it will set when any code commit / change in repository (master branch).
 
-_I'm Happy To Get [Suggestions](https://forms.gle/TbfdXQ5H3a3oSTjo6)_ :smile:
+_I'm Happy To Get [Suggestions](https://forms.gle/UPiN8UrHikj9UR5UA)_ :smile:
