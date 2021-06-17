@@ -7,7 +7,7 @@
 ### Pre-Requirments
 
 - [Jenkins](../../Jenkins/Jenkins_installation.md) with [Maven](../../Maven/Maven_installation.md) Server
-- [Ansible](../../Jenkins/Jenkins_installation.md) server
+- [Ansible](../../Ansible/Ansible_installation/) server
 - [Docker](../../Docker/installation/) server
 - Install [Publish over SSH](#publish_over_ssh) Plugin
 - [Enable Connection](#connect_ansible_jenkins) between Ansible and Jenkins
