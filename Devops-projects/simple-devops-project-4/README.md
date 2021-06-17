@@ -79,7 +79,6 @@ ssh-copy-id dockeradmin@<docker-host-IP>
     - Source files : `Dockerfile`
     - Remote directory : `//opt//docker`
     - Exec Command:
-      -
       ~~~sh
       cd /opt/docker
       docker build -t webapp_demo .
@@ -151,7 +150,6 @@ All are same as `Create an docker image` above. but change `Send files or execut
   - Source files : `Dockerfile`
   - Remote directory : `//opt//docker`
   - Exec Command:
-    -
     ~~~sh
     cd /opt/docker
     docker build -t webapp_demo:v1.$BUILD_ID .
