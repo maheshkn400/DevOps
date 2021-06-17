@@ -22,6 +22,7 @@ Table of content
   - [Simple Devops Project 1](./Devops-projects/simple-devops-project-1/) - tools included `Git`, `github`, `Jenkins`, `Maven`, and `Tomcat 8 `server (EC2).
   - [Simple Devops Project 2](./Devops-projects/simple-devops-project-2/) - tools included `Git`, `github`, `Jenkins`, `Maven`, `Ansible` and `Tomcat 8 `server (EC2).
   - [Simple Devops Project 3](./Devops-projects/simple-devops-project-3/) - tools included `Git`, `github`, `Jenkins`, `Maven`, and `Docker`.
+  - [Simple DevOps Project 4](./Devops-projects/simple-devops-project-4) - tools included `Git`, `github`, `Jenkins`, `Maven`, `Ansible` and `Docker`.
   - [Simple Devops Project 5](./Devops-projects/simple-devops-project-5/) - tools included `Git`, `github`, `Jenkins`, `Maven`, `Ansible`, `Docker hub` and `kubernetes cluster`.
 <!--te-->
 
