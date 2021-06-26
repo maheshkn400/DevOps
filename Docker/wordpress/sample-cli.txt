@@ -6,7 +6,7 @@ docker run my_image/centos8_httpd /usr/bin/which httpd
 
 docker run -it -p 8081:80 my_image/centos8_httpd /bin/bash
 
-ddocker run --name some-wordpress -p 8080:80 -d wordpress
+docker run --name some-wordpress -p 8080:80 -d wordpress
 
 docker run --name mywp -p 80:80 -d wordpress
 
@@ -24,7 +24,7 @@ docker run --name mywp --link mysqlsrv:mysql -e WORDPRESS_DB_USER=root -e WORDPR
 
 Firt you want to start MYSQL docker contailner
 
- docker run --name some-name -e MYSQL_ROOT_PASSWORD=<set-root-pwd> -d mysql:tag
+docker run --name some-name -e MYSQL_ROOT_PASSWORD=<set-root-pwd> -d mysql:tag
 docker run --name mysqlsrv -e MYSQL_ROOT_PASSWORD=secretpw -d mysql:5.7
 
 docker exec -it mysqlsrv mysql -u root -p
