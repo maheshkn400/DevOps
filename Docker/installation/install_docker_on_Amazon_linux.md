@@ -7,9 +7,10 @@ It is a standard method of installing [Docker](https://www.docker.com/) on [Amaz
 sudo yum update -y
 ~~~
 2. Install Docker
+
 On Amazon Linux
 ~~~sh
-sudo yum install -y
+sudo yum install docker -y
 ~~~
 On Amazon Linux 2
 ~~~sh
