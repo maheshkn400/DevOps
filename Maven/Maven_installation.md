@@ -50,15 +50,15 @@ compile and run
 Download and unzip the Maven zip file to `/opt` location
 ~~~sh
 [root@jenkins ] cd /opt
-[root@jenkins ] wget https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
-[root@jenkins ] unzip apache-maven-3.8.1-bin.zip
+[root@jenkins ] wget https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.zip
+[root@jenkins ] unzip apache-maven-3.8.4-bin.zip
 [root@jenkins ] ls
-apache-maven-3.8.1
+apache-maven-3.8.4
 ~~~
-Add the `bin` directory of the created directory `apache-maven-3.8.1` to the `PATH` environment variable
+Add the `bin` directory of the created directory `apache-maven-3.8.4` to the `PATH` environment variable
 ~~~sh
 [root@jenkins ] cat > /etc/profile.d/maven.sh <<EOF
-export PATH=/opt/apache-maven-3.8.1/bin:$PATH
+export PATH=/opt/apache-maven-3.8.4/bin:$PATH
 EOF
 [root@jenkins ] source /etc/profile.d/maven.sh
 ~~~
@@ -67,8 +67,8 @@ or logout and login user
 Confirm with `mvn -v` in a new shell. The result should look like as follows
 ~~~sh
 [root@jenkins ] mvn -v
-Apache Maven 3.8.1 (0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d)
-Maven home: /opt/apache-maven-3.8.1
+Apache Maven 3.8.4 (0ec48eb515d93f8515d4abe465570dfded6fa13a3ceb9aab8031428442d9912ec20f066b2afbf56964ffe1ceb56f80321b50db73cf77a0e2445ad0211fb8e38d)
+Maven home: /opt/apache-maven-3.8.4
 Java version: 1.8.0_71, vendor: Oracle Corporation
 Java home: /usr/java/jdk1.8.0_71/jre/
 Default locale: en_US, platform encoding: UTF-8
@@ -77,7 +77,7 @@ Default locale: en_US, platform encoding: UTF-8
 ### Integrate Maven on Jenkins
 Jenkins Dashboard >> `Manage Jenkins` > `Global Tool Configuration` > `Maven` > click `JDK installations` button
 - Name: `Maven`
-- MAVEN_HOME: `/opt/apache-maven-3.8.1/`
+- MAVEN_HOME: `/opt/apache-maven-3.8.4/`
 - click apply and save
 
 ![Maven path set](./img/maven-env-path-set.png)
