@@ -25,7 +25,7 @@ To deploy our build artifacts on tomcat server our Jenkins server need access. F
 
 - `Manage Jenkins` > `Manage Credentials` > Under `Stores scoped to Jenkins` on the right, click on `Jenkins`> Under `System`, click the `Global credentials (unrestricted)` link to access this default domain > Click `Add Credentials` on the left. >
     - From the `Kind field` choose `Username and password`
-    - Username : `deploy`
+    - Username : `deployer`
     - Password : `XXXXXXX`
     - id : `Tomcat_user`
     - Description: `Tomcat user to deploy on tomcat server`
