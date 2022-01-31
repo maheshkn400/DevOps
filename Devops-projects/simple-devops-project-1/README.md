@@ -51,6 +51,11 @@ To deploy our build artifacts on tomcat server our Jenkins server need access. F
 
 Save and run the job now.
 
+Ater success build and deploy check url as follows
+
+~~~sh
+<publid-ip>:8080/webapp
+~~~
 **Continuous Integration & Continuous Deployment (CI/CD)**
 
 Now job is running fine but to make this as Continuous Integration and Continuous Deployment To do that go back and modify job as below.
