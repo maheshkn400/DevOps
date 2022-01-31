@@ -47,6 +47,11 @@ compile and run
 2021/5/08 20:37
 ~~~
 ## NOW TIME TO INSTALL JENKINES
+Get and add epel repo
+We doing all practice on AWS cloud so, on amazon linux commands as follows or other [click here](https://docs.fedoraproject.org/en-US/epel/) or web search.
+~~~sh
+[root@jenkins ] amazon-linux-extras install epel -y
+~~~
 get and add Jenkins official repository to `yum` repo
 ~~~sh
 [root@jenkins ] cd /etc/yum.repos.d
@@ -55,6 +60,9 @@ get and add Jenkins official repository to `yum` repo
 Import jenkins repository GPG key with `rpm` command and install Jenkins
 ~~~sh
 [root@jenkins yum.repos.d] rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+~~~
+Install Jenkins
+~~~sh
 [root@jenkins yum.repos.d] yum -y install jenkins
 [root@jenkins yum.repos.d] systemctl start jenkins
 [root@jenkins yum.repos.d] systemctl enable jenkins
