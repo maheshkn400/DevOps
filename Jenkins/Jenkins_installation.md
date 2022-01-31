@@ -46,6 +46,7 @@ compile and run
 [root@jenkins ] java day
 2021/5/08 20:37
 ~~~
+
 ## NOW TIME TO INSTALL JENKINES
 Get and add epel repo
 We doing all practice on AWS cloud so, on amazon linux commands as follows or other [click here](https://docs.fedoraproject.org/en-US/epel/) or web search.
@@ -66,6 +67,10 @@ Install Jenkins
 [root@jenkins yum.repos.d] yum -y install jenkins
 [root@jenkins yum.repos.d] systemctl start jenkins
 [root@jenkins yum.repos.d] systemctl enable jenkins
+~~~
+## Finally install git on Jenkins Server
+~~~sh
+[root@jenkins ] yum install git
 ~~~
 If you are using Redhat, CentOS enable `8080` port on firewall
 ~~~sh
