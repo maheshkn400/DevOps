@@ -131,9 +131,9 @@ Access to ``http://(server's hostname or IP address):8080/daytime`` to make sure
 
 ![](img/tomcat8-day.png)
 ### Create Tomcat User
-adding following lines to ``/usr/tomcat8/config/tomcat-users.xml`` in between ``<tomcat-users> .... </tomcat-users>`` tags
+adding following lines to ``/usr/tomcat8/conf/tomcat-users.xml`` in between ``<tomcat-users> .... </tomcat-users>`` tags
 ~~~sh
-[root@tomcat8 ]vi /usr/tomcat8/config/tomcat-users.xml
+[root@tomcat8 ]vi /usr/tomcat8/conf/tomcat-users.xml
 	<role rolename="manager-gui"/>
 	<role rolename="manager-script"/>
 	<role rolename="manager-jmx"/>
