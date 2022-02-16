@@ -45,7 +45,7 @@ Test the connection by clicking `Test Connection` and save
     tasks:
       - name: copy jar/war onto tomcat servers
           copy:
-            src: /opt/playbooks/wabapp/target/webapp.war
+            src: /opt/playbooks/webapp/target/webapp.war
             dest: /usr/tomcat8/webapps
   ~~~
 
@@ -60,7 +60,7 @@ Test the connection by clicking `Test Connection` and save
  - Now login to `Ansible` server generate `SSH key` and copy to `tomcat` server
   ~~~sh
   ssh-keygen
-  ssh-copy-id ansadm@<docker-host-IP>
+  ssh-copy-id ansadm@<tomcat-server_IP>
   ~~~
 
 Add tomcat server details to /etc/ansible/hosts (if you are using other hosts file update server info there)
@@ -73,7 +73,7 @@ echo "<tomcat-server_IP>" >> /etc/ansible/hosts
 Create Jenkins job, Fill the following details,
 
 Login to Jenksing Dashboard > click `New Item`
-  - Enter item name: `sample devops project 1`
+  - Enter item name: `sample devops project 2`
    - Source Code Management:
     - Repository: `https://github.com/maheshkn400/hello-world.git`
     - Branches to build : `*/master`
@@ -86,7 +86,7 @@ Login to Jenksing Dashboard > click `New Item`
       - Source fiels: `webapp/target/*.war`
       - Remote directory: `//opt//playbooks`
   - Add post-build steps
-    - Send files or execute commands over ssH
+    - Send files or execute commands over SSH
       - SSH Server : `ansible_server`
       - Exec command: `ansible-playbook /opt/playbooks/copywarfile.yml`
 
