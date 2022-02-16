@@ -74,14 +74,14 @@ Jenkins Dashboard >> click `New item`
   ~~~sh
   docker stop mkn400_demo;
   docker rm -f mkn400_demo;
-  docker image rm -f mkn400_demo;
+  docker image rm -f mkn400_demo_img;
   cd /opt/docker;
-  docker build -t valaxy_demo .
+  docker build -t mkn400_demo_img .
   ~~~
 
   - send files or execute commands over SSH  
     - Name: `docker_host`  
-    - Exec command	: `docker run -d --name mkn400_demo -p 8090:8080 mkn400_demo`  
+    - Exec command	: `docker run -d --name mkn400_demo -p 8090:8080 mkn400_demo_img`  
 
 Login to Docker host and check images and containers before run the job. (no images and containers)
 
@@ -90,4 +90,4 @@ Run Jenkins job
 check images and containers again on Docker host. This time an image and container get creates through Jenkins job
 
 Access web application from browser which is running on container
-`http://<docker_host_Public_IP>:8090`
+`http://<docker_host_Public_IP>:8090/webapp`
