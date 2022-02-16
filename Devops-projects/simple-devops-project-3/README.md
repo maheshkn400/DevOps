@@ -6,27 +6,9 @@
 
 - [Jenkins](../../Jenkins/Jenkins_installation.md) with [Maven](../../Maven/Maven_installation.md) Server
 - [Docker](../../Docker/installation/) host
+- [Create user](#create_user) on Docker Host
 - Install [Publish over ssh](#publish_over_ssh) Plugin
 - [Enable connection](#enable_ssh) between Docker and Jenkins
-- [Create user](#create_user) on Docker Host
-
-<a name="publish_over_ssh"></a>
-**Install "publish Over SSH" plugin**
-
-Jenkins Dashboard >> `Manage Jenkins` > `Manage Plugins` > `Available` > `Publish over SSH` and install
-
-<a name="enable_ssh"></a>
-**Enable connection between Docker and Jenkins**
-
-Jenkins Dashboard >> `Manage Jenkins` > `Configure System` > `Publish Over SSH` > `SSH Servers`
-
-- SSH Servers:
-  - Name : `docker_host`
-  - Hostname: `<ServerIP>`
-  - username: `dockeradmin`
-  - password: `*******`
-
-Test the connection by clicking `Test Connection` and save
 
 <a name="create_user"></a>
 **Create User On docker Host**
@@ -53,6 +35,25 @@ MAINTAINER "maheshkumar.root@gmail.com"
 # copy war file on to container
 COPY ./webapp.war /usr/local/tomcat/webapps
 ~~~
+
+<a name="publish_over_ssh"></a>
+**Install "publish Over SSH" plugin**
+
+Jenkins Dashboard >> `Manage Jenkins` > `Manage Plugins` > `Available` > `Publish over SSH` and install.
+
+<a name="enable_ssh"></a>
+**Enable connection between Docker and Jenkins**
+
+Jenkins Dashboard >> `Manage Jenkins` > `Configure System` > `Publish Over SSH` > `SSH Servers`
+
+- SSH Servers:
+  - Name : `docker_host`
+  - Hostname: `<ServerIP>`
+  - username: `dockeradmin`
+  - password: `*******`
+
+Test the connection by clicking `Test Connection` and save
+
 
 **Create Jenkins job**
 
