@@ -12,23 +12,24 @@ In this project we are creating Jenkins CI CD of `git` > `github` > `jenkins` > 
 - Install [Publish Over SSH ](#publish_over_ssh) plugin
 - [Enable connection between Ansible and Jenkins](#enable_ssh)
 
-<a name="publish_over_ssh"></a>
-**Install "Publish Over SSH"**
+<a name="ssh_key"></a>
+**Create `SSH key` and copy to `Tomcat server`**
+ - Login to tomcat user and create `ansadm` user, set password and add to sudo
+ ~~~sh
+ sudo useradd ansadm
+ sudo passwd ansadm
+ sudo echo "ansadm ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+ ~~~
+ - Now login to `Ansible` server generate `SSH key` and copy to `tomcat` server
+  ~~~sh
+  ssh-keygen
+  ssh-copy-id ansadm@<tomcat-server_IP>
+  ~~~
 
-Login to Jenkins Dashboard >> `Manage Jenkins` > `Manage Plugins` > `Available` > `Publish over SSH`
-
-<a name="enable_ssh"></a>
-**Enable connection between Ansible and Jenkins**
-
-Login to Jenkins Dashboard >> `Manage Jenkins` > `Configure System` > `Publish Over SSH` > `SSH Servers`
-
-- SSH Servers:
-  - Name : `ansible_server`
-  - Hostname:``<ServerIP>``
-  - username: `ansadm`
-  - password: `*******`
-
-Test the connection by clicking `Test Connection` and save
+Add tomcat server details to /etc/ansible/hosts (if you are using other hosts file update server info there)
+~~~sh
+echo "<tomcat-server_IP>" >> /etc/ansible/hosts
+~~~
 
 **Create Playbooks**
 
@@ -49,24 +50,23 @@ Test the connection by clicking `Test Connection` and save
             dest: /usr/tomcat8/webapps
   ~~~
 
-<a name="ssh_key"></a>
-**Create `SSH key` and copy to `Tomcat server`**
- - Login to tomcat user and create `ansadm` user, set password and add to sudo
- ~~~sh
- sudo useradd ansadm
- sudo passwd ansadm
- sudo echo "ansadm ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
- ~~~
- - Now login to `Ansible` server generate `SSH key` and copy to `tomcat` server
-  ~~~sh
-  ssh-keygen
-  ssh-copy-id ansadm@<tomcat-server_IP>
-  ~~~
+<a name="publish_over_ssh"></a>
+**Install "Publish Over SSH"**
 
-Add tomcat server details to /etc/ansible/hosts (if you are using other hosts file update server info there)
-~~~sh
-echo "<tomcat-server_IP>" >> /etc/ansible/hosts
-~~~
+Login to Jenkins Dashboard >> `Manage Jenkins` > `Manage Plugins` > `Available` > `Publish over SSH`
+
+<a name="enable_ssh"></a>
+**Enable connection between Ansible and Jenkins**
+
+Login to Jenkins Dashboard >> `Manage Jenkins` > `Configure System` > `Publish Over SSH` > `SSH Servers`
+
+- SSH Servers:
+  - Name : `ansible_server`
+  - Hostname:``<ServerIP>``
+  - username: `ansadm`
+  - password: `*******`
+
+Test the connection by clicking `Test Connection` and save
 
 **Jenkins CI CD new item Setup**
 
