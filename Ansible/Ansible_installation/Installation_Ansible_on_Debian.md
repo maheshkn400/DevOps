@@ -16,3 +16,4 @@ $ sudo apt install ansible
 ### Install On Other Platforms
 * [Install on Redhat, CentOS and Fedora](../Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md)
 * [Install on Ubuntu](../Ansible_installation/Installation_Ansible_on_Ubuntu.md)
+* [Install on Amazon Linux](../Ansible_installation/Installation_Ansible_on_Amazon-Linux.md)

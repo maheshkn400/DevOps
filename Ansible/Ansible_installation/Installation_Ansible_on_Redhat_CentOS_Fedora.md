@@ -29,3 +29,4 @@ $ sudo yum install ansible
 ### Install On Other Platforms
 * [Install on Debian](../Ansible_installation/Installation_Ansible_on_Debian.md)
 * [Install on Ubuntu](../Ansible_installation/Installation_Ansible_on_Ubuntu.md)
+* [Install on Amazon Linux](../Ansible_installation/Installation_Ansible_on_Amazon-Linux.md)
