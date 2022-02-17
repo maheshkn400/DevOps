@@ -26,6 +26,21 @@ On RHEL:
 $ sudo yum install ansible
 ~~~
 
+Configure 'sshd_config'
+~~~sh
+sudo vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+~~~
+
+Restart the 'sshd' service
+~~~sh
+sudo service sshd restart
+~~~
+OR
+~~~sh
+sudo systemctl restart sshd
+~~~
+
 ### Install On Other Platforms
 * [Install on Debian](../Ansible_installation/Installation_Ansible_on_Debian.md)
 * [Install on Ubuntu](../Ansible_installation/Installation_Ansible_on_Ubuntu.md)
