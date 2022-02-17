@@ -24,6 +24,20 @@ OR
 sudo systemctl restart sshd
 ~~~
 
+
+Create a user for ansible
+~~~sh
+sudo  useradd ansadmin
+sudo  passwd ansadmin
+~~~
+
+Add to sudo with NOPASSWD
+~~~sh
+sudo visudo
+#add follwoing line
+ansadmin	ALL=(ALL)	NOPASSWD: ALL
+~~~
+
 ### Install On Other Platforms
 * [Install on Debian](../Ansible_installation/Installation_Ansible_on_Debian.md)
 * [Install on Redhat, CentOS and Fedora](../Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md)
