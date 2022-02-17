@@ -6,7 +6,7 @@
 Table of content
 =================
 <!--ts-->
-* Ansible Installation on [Redhat, CentOS and Fedora](Ansible/Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md) , [Ubuntu](Ansible/Ansible_installation/Installation_Ansible_on_Ubuntu.md), [Debian](Ansible/Ansible_installation/Installation_Ansible_on_Debian.md)
+* Ansible Installation on [Redhat, CentOS and Fedora](Ansible/Ansible_installation/Installation_Ansible_on_Redhat_CentOS_Fedora.md) , [Ubuntu](Ansible/Ansible_installation/Installation_Ansible_on_Ubuntu.md), [Debian](Ansible/Ansible_installation/Installation_Ansible_on_Debian.md),  [Amazon Linux](Ansible/Ansible_installation/Installation_Ansible_on_Amazon-Linux.md)
 * Docker Installation on [Amazon Linux](Docker/installation/install_docker_on_Amazon_linux.md), [CentOS and Fedora](Docker/installation/install_docker_on_centos_fedora.md), [Ubuntu](Docker/installation/install_docker_on_ubuntu.md)
   * [Docker Commands](./Docker/Docker-commands.md)
   * Docker compose [WordPress](./Docker/wordpress/) `YAML` script
