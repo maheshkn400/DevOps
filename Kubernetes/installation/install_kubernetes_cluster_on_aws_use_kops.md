@@ -10,6 +10,21 @@
  #sudo apt-get install unzip - if you dont have unzip in your system
  ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 ~~~
+or if facing any python issue awscliv2
+~~~sh
+#awscli v2 installation
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install unzip
+unzip awscliv2.zip
+sudo ./aws/install
+sudo ./aws/install
+# Output
+You can now run: /usr/local/bin/aws --version
+#check installation
+/usr/local/bin/aws --version
+#or
+aws --version
+~~~
 3. Install `kubectl`
 ~~~sh
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
