@@ -67,8 +67,10 @@ ssh-keygen
 ~~~
 11. Create kubernetes cluster definitions on S3 bucket
 ~~~sh
-kops create cluster --cloud=aws --zones=ap-southeast-1b --name=dev.k8s.mkn400.tk --dns-zone=mkn400.tk --dns private
+kops create cluster --cloud=aws --zones=ap-south-1a --name=dev.k8s.mkn400.tk --dns-zone=mkn400.tk --dns private
 ~~~
+:warning: **Be very careful here!**: Zones
+
 12. Create kubernetes cluser and default it will create one master node and two worker nodes.
 ~~~sh
 kops update cluster dev.k8s.mkn400.tk --yes
