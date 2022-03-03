@@ -10,6 +10,7 @@ Table of Content
   * [Installation on Ubuntu](Ansible_installation/Installation_Ansible_on_Ubuntu.md)
   * [Installation on Debian](Ansible_installation/Installation_Ansible_on_Debian.md)
   * [Install on Amazon Linux](Ansible_installation/Installation_Ansible_on_Amazon-Linux.md)
+* [Sample Playbooks](playbooks/)
 <!--te-->
 <a name="about_ansible"></a>
 
