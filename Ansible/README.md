@@ -11,6 +11,9 @@ Table of Content
   * [Installation on Debian](Ansible_installation/Installation_Ansible_on_Debian.md)
   * [Install on Amazon Linux](Ansible_installation/Installation_Ansible_on_Amazon-Linux.md)
 * [Sample Playbooks](playbooks/)
+* [Sample Inventory](inventory_sample.yaml)
+* [Ansible Loop and With](Ansible_loop-n-with_item.yaml)
+
 <!--te-->
 <a name="about_ansible"></a>
 
