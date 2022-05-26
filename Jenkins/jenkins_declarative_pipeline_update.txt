@@ -1,0 +1,110 @@
+pipeline{
+    agent any
+    tools {
+        maven 'maven3.8.5'
+    }
+    
+    stages{
+        stage('git checkout'){
+            steps{
+                git branch: 'master', credentialsId: 'github', 
+                url: 'https://github.com/bhanumannuru/bhanumannuru-hello-world-new.git'
+            }
+        }    
+        
+        stage('Maven Build'){
+            steps{
+                sh "mvn clean package"
+            }
+        } 
+        
+        stage('build && SonarQube analysis') {
+            steps{
+                withSonarQubeEnv('sonarqube8.9.8') {
+                       // Optionally use a Maven environment you've configured already
+                        sh "mvn sonar:sonar"
+                }
+           }
+       }
+        
+       stage('Email Notification'){
+            steps{
+                emailext body: '''Hi welcome to jenkins alerts,
+                Thanks,
+                Bhanu.''', 
+                recipientProviders: [buildUser()], subject: 'jenkins', to: 'tomandevops@gmail.com'
+            }
+        } 
+        
+        stage('Sending docker file to docker server over ssh'){
+            steps{
+                sshagent(['docker_server']) {
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24'
+                    sh 'scp /var/lib/jenkins/workspace/pipeline/* centos@172.31.10.24:/home/centos'
+                }
+            }
+        } 
+        
+        stage('Docker Build Image'){
+            steps{
+                sshagent(['docker_server']) {
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 cd /home/centos'
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image build -t $JOB_NAME:v1.$BUILD_ID .'
+                }
+            }
+        }
+        
+        stage('Docker Image Tagging'){
+            steps{
+                sshagent(['docker_server']) {
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 cd /home/centos'
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image tag $JOB_NAME:v1.$BUILD_ID bhanudevops106/$JOB_NAME:v1.$BUILD_ID'
+                    sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image tag $JOB_NAME:v1.$BUILD_ID bhanudevops106/$JOB_NAME:latest'
+                }
+            }
+        }
+        
+        stage('Push Docker Image to Docker Hub'){
+            steps{
+                sshagent(['docker_server']) {
+                    withCredentials([string(credentialsId: 'Docker_Hub', variable: 'docker_pwd')]) {
+                                     sh "ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker login -u bhanudevops106 -p ${docker_pwd}"
+                                     sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 cd /home/centos'
+                                     sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image push bhanudevops106/$JOB_NAME:v1.$BUILD_ID'
+                                     sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image push bhanudevops106/$JOB_NAME:latest'
+                                     
+                                     sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image rmi -f $JOB_NAME:v1.$BUILD_ID'
+                                     sh 'ssh -o StrictHostKeyChecking=no centos@172.31.10.24 docker image rmi -f bhanudevops106/$JOB_NAME:v1.$BUILD_ID'
+                    }
+                }
+           }
+       }
+       
+       stage ('Push Docker image from docker server to Kubernetes server'){
+           steps{
+                sshagent(['kubernetes_server_ansadmin']) {
+                   sh 'ssh -o StrictHostKeyChecking=no ansadmin@172.31.15.99'
+                   sh 'scp /var/lib/jenkins/workspace/project-webapp/* ansadmin@172.31.15.99:/home/ansadmin'
+                }
+           }
+       }
+   
+       stage ('Push Docker image from docker server to ansible server'){
+           steps{
+               sshagent(credentials: ['ansible_server'], ignoreMissing: true) {
+                   sh 'ssh -o StrictHostKeyChecking=no ansadmin@172.31.10.170'
+                   sh 'scp /var/lib/jenkins/workspace/project-webapp/* ansadmin@172.31.10.170:/home/ansadmin'
+               }
+            }
+       }
+       
+       stage ('Kubernetes Deployment using ansible'){
+           steps{
+               sshagent(credentials: ['ansible_server'], ignoreMissing: true) {
+                   sh 'ssh -o StrictHostKeyChecking=no ansadmin@172.31.10.170 cd /home/ansadmin'
+                   sh 'ssh -o StrictHostKeyChecking=no ansadmin@172.31.10.170 ansible-playbook ansible.yml'
+               }
+           }
+       }
+   }
+}
