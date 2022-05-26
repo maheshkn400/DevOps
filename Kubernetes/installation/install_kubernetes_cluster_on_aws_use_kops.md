@@ -100,3 +100,24 @@ kubectl get services -o wide
 ~~~sh
 kops delete cluster dev.k8s.mkn400.tk --yes
 ~~~
+
+**Troubleshoot**
+Issue:
+
+"Permission denied (publickey)" or "Authentication failed, permission denied"
+
+Solution:
+
+must cd to ~/.SSH
+cd ~/.ssh
+kops create secret --state s3://k8s.mkn400.tk --name k8s.mkn400.tk sshpublickey admin -i id_rsa.pub
+kops update cluster k8s.mkn400.tk --yes
+kops rolling-update cluster k8s.mkn400.tk --yes
+
+after above command it will remove and create new kubernetes master and nodes and output show Ready
+
+and try to reconnecct
+
+ssh -i <ssh-key.pub> ubuntu@api-k8s.mkn400.tk
+
+it will work.
